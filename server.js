@@ -38,6 +38,24 @@ app.get('/app/flip', (req, res) => {
         
     });
 
+app.get('/app/flips/:number', (req,res) =>{
+    res.statusCode = 200
+    res.statusMessage= "OK"
+    const flips = parseInt(req.params.number)
+    if(flips == NaN){
+        res.status(404).send('Integer not passed')
+        return
+    }
+    const flipResults = coinFlips(flips)
+    const summary = countFlips(flipResults)
+    res.json({'raw' : flipResults, 'summary' : summary})
+})
+
+app.get('/app/flip/call/:flip(heads|tails)', (req,res) =>{
+    const guessResult = flipACoin(req.params.flip)
+    res.status(200).send(guessResult)
+
+})
 
 
 
