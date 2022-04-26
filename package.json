@@ -1,0 +1,23 @@
+{
+  "name": "a03-tamasa",
+  "version": "0.0.1",
+  "description": "\"a rest api\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://tAmasa: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@github.com/comp426-2022-spring/a03-tAmasa.git"
+  },
+  "author": "Tarun Amasa",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-spring/a03-tAmasa/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-spring/a03-tAmasa#readme",
+  "dependencies": {
+    "express": "^4.18.0",
+    "minimist": "^1.2.6"
+  }
+}
