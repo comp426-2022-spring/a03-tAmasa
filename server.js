@@ -42,9 +42,9 @@ app.get('/app/flips/:number', (req,res) =>{
     res.statusCode = 200
     res.statusMessage= "OK"
     const flips = parseInt(req.params.number)
-    if(!Number.isInteger(req.params.number)){
-        res.status(404).send('Integer not passed')
-    }
+    // if(!Number.isInteger(req.params.number)){
+    //     res.status(404).send('Integer not passed')
+    // }
     const flipResults = coinFlips(flips)
     const summary = countFlips(flipResults)
     res.json({'raw' : flipResults, 'summary' : summary})
